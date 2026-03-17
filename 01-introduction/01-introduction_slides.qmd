@@ -124,20 +124,40 @@ Scripts break when they move between computers. The script might depend on:
 - **Manual data manipulation** steps not captured in code
 :::
 ::: {.column width="35%"}
-![](assets/xkcd_2054_data_pipeline.png){fig-align="center"}
+![](assets/xkcd_2054_data_pipeline.png){fig-align="center" width="95%"}
 :::
 ::::
 
-. . .
-
-These are not exotic bugs. They are the regular consequences of conflating your personal computing environment with the project's requirements.
-
 ::: aside
-Sandve et al. (2013). [Ten Simple Rules for Reproducible Computational Research](https://doi.org/10.1371/journal.pcbi.1003285). *PLOS Comp Bio*, 9(10): e1003285. | xkcd 2054.
+xkcd 2054.
 :::
 
 ::: {.notes}
-~3 min. Every item on this list will seem obvious by Week 3. Sandve et al. distill reproducibility to a handful of rules: avoid manual data manipulation, record all intermediate results, and for every result keep track of how it was produced. These rules sound obvious but are rarely applied.
+~2 min. Every item on this list will seem obvious by Week 3. Ask students which of these they have encountered.
+:::
+
+## Environment vs. requirements
+
+These are not exotic bugs. They are the regular consequences of conflating your personal computing environment with the project's requirements.
+
+. . .
+
+Sandve et al. distill reproducibility to a handful of rules:
+
+1. Avoid manual data manipulation
+2. Record all intermediate results
+3. For every result, keep track of how it was produced
+
+. . .
+
+These rules sound obvious but are rarely applied.
+
+::: aside
+Sandve et al. (2013). [Ten Simple Rules for Reproducible Computational Research](https://doi.org/10.1371/journal.pcbi.1003285). *PLOS Comp Bio*, 9(10): e1003285.
+:::
+
+::: {.notes}
+~1 min. The three rules from Sandve et al. are a good litmus test for any analysis project. We will return to these throughout the course.
 :::
 
 ## The research computing lifecycle
@@ -385,7 +405,7 @@ Four benefits:
 
 ## A modular pipeline
 
-![Each script reads defined inputs and writes defined outputs. The branch from `clean_deaths.RDS` shows reuse — one cleaning step feeds both modeling and descriptive analysis.](assets/modular_pipeline.svg){fig-align="center"}
+![Modular pipeline.](assets/modular_pipeline.svg){fig-align="center" height="500"}
 
 ::: {.notes}
 ~2 min. Walk through the diagram. Numbering scripts communicates execution order at a glance. Note: script numbers in `code/` are independent of manuscript figure/table numbers — the code pipeline has its own ordering logic; the manuscript has its own.
@@ -636,10 +656,8 @@ No lab this week. The hands-on project setup lab begins in **Session 04** after 
 
 ## How `here::here()` resolves paths {visibility="uncounted"}
 
-![Same call resolves to different absolute paths on different machines — the `.Rproj` file anchors the root.](assets/here_resolution.svg){fig-align="center"}
-
-Alice's Mac resolves to `/Users/alice/projects/mortality_analysis/data_raw/raw_deaths.csv`. Bob's Windows PC resolves to `C:/Users/bob/Documents/mortality_analysis/data_raw/raw_deaths.csv`. The code is identical — the `.Rproj` file handles the rest.
+![Path resolution across machines.](assets/here_resolution.svg){fig-align="center" height="425"}
 
 ::: {.notes}
-Appendix slide. Use if time permits or if students ask how here::here() resolves paths across machines. Note: this slide shows the OS-specific resolution that the main `here` slide does not cover. The lecture notes have a deep dive on the underlying rprojroot algorithm.
+Appendix slide. Use if time permits or if students ask how here::here() resolves paths across machines. Alice's Mac resolves to `/Users/alice/projects/mortality_analysis/data_raw/raw_deaths.csv`. Bob's Windows PC resolves to `C:/Users/bob/Documents/mortality_analysis/data_raw/raw_deaths.csv`. The code is identical — the `.Rproj` file handles the rest. The lecture notes have a deep dive on the underlying rprojroot algorithm.
 :::
