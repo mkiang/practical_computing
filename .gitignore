@@ -1,0 +1,39 @@
+# Quarto build artifacts
+*.quarto_ipynb
+.quarto/
+*_files/
+
+# Rendered site output (old output dir, kept as safeguard)
+_site/
+
+# No Jupyter notebooks in this project
+*.ipynb
+
+# R artifacts
+.Rhistory
+.RData
+.Rproj.user/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Rendered HTML in source directories (regenerate with quarto render)
+*.html
+
+# Allow rendered output in docs/ to be committed for GitHub Pages
+!docs/**
+
+# But exclude answer keys and question banks from docs/ (student-facing)
+docs/**/*_problem_set_key.html
+docs/**/*_question_bank.html
+
+# Internal project files (not for students)
+eph_course_notes_summary.md
+*_question_bank.qmd
+*_outline.md
+*_problem_set_key.qmd
+.positai/*
+
+/.quarto/
+**/*.quarto_ipynb

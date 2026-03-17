@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 160" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <filter id="sh" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="1" stdDeviation="1.5" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="24" text-anchor="middle" font-size="15" font-weight="600" fill="#334155">The Reprex Workflow</text>
+
+  <!-- Step 1: Write minimal code -->
+  <rect x="15" y="45" width="145" height="60" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="87" y="70" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a5f">Write minimal</text>
+  <text x="87" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a5f">code that shows</text>
+  <text x="87" y="98" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a5f">the problem</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="160" y1="75" x2="190" y2="75" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 2: Copy to clipboard -->
+  <rect x="192" y="45" width="130" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="257" y="72" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">Copy to</text>
+  <text x="257" y="88" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">clipboard</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="322" y1="75" x2="352" y2="75" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 3: Run reprex -->
+  <rect x="354" y="45" width="130" height="60" rx="8" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="419" y="72" text-anchor="middle" font-size="11" font-weight="600" fill="#581c87">Run</text>
+  <text x="419" y="88" text-anchor="middle" font-size="10" font-weight="600" fill="#581c87" font-family="'SF Mono', 'Fira Code', monospace">reprex::reprex()</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="484" y1="75" x2="514" y2="75" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 4: Formatted output -->
+  <rect x="516" y="45" width="145" height="60" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="588" y="70" text-anchor="middle" font-size="11" font-weight="600" fill="#14532d">Formatted</text>
+  <text x="588" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#14532d">Markdown output</text>
+  <text x="588" y="98" text-anchor="middle" font-size="10" fill="#14532d">(code + results)</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="661" y1="75" x2="691" y2="75" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 5: Paste/share -->
+  <rect x="693" y="45" width="145" height="60" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="765" y="70" text-anchor="middle" font-size="11" font-weight="600" fill="#14532d">Paste into</text>
+  <text x="765" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#14532d">GitHub / SO /</text>
+  <text x="765" y="98" text-anchor="middle" font-size="11" font-weight="600" fill="#14532d">email</text>
+
+  <!-- Caption -->
+  <text x="450" y="140" text-anchor="middle" font-size="11" fill="#64748b" font-style="italic">If the person helping you can't reproduce the problem, they can't diagnose it.</text>
+</svg>

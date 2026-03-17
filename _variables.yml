@@ -1,0 +1,15 @@
+## Course-wide variables
+## Reference in any .qmd file with: {{< var course.number >}}
+## See: https://quarto.org/docs/authoring/variables.html
+
+course:
+  number: "EPI XXX"
+  title: "Practical Computing for Population Health Research"
+  short_title: "Practical Computing"
+  quarter: "Fall 2099"
+  institution: "Stanford University"
+  department: "Department of Epidemiology and Population Health"
+
+instructor:
+  name: "Mathew Kiang"
+  email: "mkiang@stanford.edu"

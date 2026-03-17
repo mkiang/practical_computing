@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="1" stdDeviation="1.5" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="480" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#334155">The Research Computing Lifecycle</text>
+
+  <!-- Main flow boxes (top row) -->
+  <!-- Research Question -->
+  <rect x="10" y="50" width="110" height="52" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="65" y="72" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a5f">Research</text>
+  <text x="65" y="88" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a5f">Question</text>
+
+  <!-- Raw Data -->
+  <rect x="155" y="50" width="110" height="52" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="210" y="72" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">Raw</text>
+  <text x="210" y="88" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">Data</text>
+
+  <!-- Data Cleaning -->
+  <rect x="300" y="50" width="110" height="52" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="355" y="72" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">Data</text>
+  <text x="355" y="88" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">Cleaning</text>
+
+  <!-- Analysis -->
+  <rect x="445" y="50" width="110" height="52" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="500" y="80" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">Analysis</text>
+
+  <!-- Results -->
+  <rect x="590" y="50" width="110" height="52" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="645" y="72" text-anchor="middle" font-size="11" font-weight="600" fill="#78350f">Results</text>
+  <text x="645" y="88" text-anchor="middle" font-size="10" fill="#78350f">(Figures, Tables)</text>
+
+  <!-- Manuscript -->
+  <rect x="735" y="50" width="110" height="52" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="790" y="80" text-anchor="middle" font-size="11" font-weight="600" fill="#14532d">Manuscript</text>
+
+  <!-- Replication -->
+  <rect x="880" y="50" width="70" height="52" rx="8" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="915" y="80" text-anchor="middle" font-size="10" font-weight="600" fill="#581c87">Replication</text>
+
+  <!-- Arrows between main boxes -->
+  <line x1="120" y1="76" x2="153" y2="76" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="265" y1="76" x2="298" y2="76" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="410" y1="76" x2="443" y2="76" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="555" y1="76" x2="588" y2="76" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="700" y1="76" x2="733" y2="76" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="845" y1="76" x2="878" y2="76" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Dashed lines to artifact boxes -->
+  <line x1="210" y1="102" x2="210" y2="140" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="355" y1="102" x2="355" y2="140" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="500" y1="102" x2="500" y2="140" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="645" y1="102" x2="645" y2="140" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="790" y1="102" x2="790" y2="140" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Artifact boxes (bottom row) -->
+  <!-- data_raw/ -->
+  <rect x="160" y="142" width="100" height="36" rx="5" fill="#f8fafc" stroke="#d1d5db" stroke-width="1"/>
+  <text x="210" y="164" text-anchor="middle" font-size="10" fill="#6b7280" font-family="'SF Mono', 'Fira Code', monospace">data_raw/</text>
+
+  <!-- code/01_clean.R + data/ -->
+  <rect x="295" y="142" width="120" height="50" rx="5" fill="#f8fafc" stroke="#d1d5db" stroke-width="1"/>
+  <text x="355" y="161" text-anchor="middle" font-size="9.5" fill="#6b7280" font-family="'SF Mono', 'Fira Code', monospace">code/01_clean.R</text>
+  <text x="355" y="179" text-anchor="middle" font-size="9.5" fill="#6b7280" font-family="'SF Mono', 'Fira Code', monospace">data/</text>
+
+  <!-- code/02_analyze.R + output/ -->
+  <rect x="435" y="142" width="130" height="50" rx="5" fill="#f8fafc" stroke="#d1d5db" stroke-width="1"/>
+  <text x="500" y="161" text-anchor="middle" font-size="9.5" fill="#6b7280" font-family="'SF Mono', 'Fira Code', monospace">code/02_analyze.R</text>
+  <text x="500" y="179" text-anchor="middle" font-size="9.5" fill="#6b7280" font-family="'SF Mono', 'Fira Code', monospace">output/</text>
+
+  <!-- plots/ + rmds/ -->
+  <rect x="598" y="142" width="94" height="50" rx="5" fill="#f8fafc" stroke="#d1d5db" stroke-width="1"/>
+  <text x="645" y="161" text-anchor="middle" font-size="9.5" fill="#6b7280" font-family="'SF Mono', 'Fira Code', monospace">plots/</text>
+  <text x="645" y="179" text-anchor="middle" font-size="9.5" fill="#6b7280" font-family="'SF Mono', 'Fira Code', monospace">rmds/</text>
+
+  <!-- manuscript/ -->
+  <rect x="745" y="142" width="90" height="36" rx="5" fill="#f8fafc" stroke="#d1d5db" stroke-width="1"/>
+  <text x="790" y="164" text-anchor="middle" font-size="10" fill="#6b7280" font-family="'SF Mono', 'Fira Code', monospace">manuscript/</text>
+
+  <!-- Caption -->
+  <text x="480" y="230" text-anchor="middle" font-size="11" fill="#64748b" font-style="italic">Each stage produces artifacts (code, data, documentation) that together constitute the research compendium.</text>
+  <text x="480" y="248" text-anchor="middle" font-size="11" fill="#64748b" font-style="italic">The manuscript is just one output among many.</text>
+</svg>

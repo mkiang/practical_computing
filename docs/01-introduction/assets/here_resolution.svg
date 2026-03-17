@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#6366f1">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#16a34a">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="410" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1a1a2e">How here::here() resolves paths</text>
+
+  <!-- The R code in the center -->
+  <rect x="210" y="50" width="400" height="55" rx="8" fill="#1e293b" filter="url(#shadow)"/>
+  <text x="410" y="72" text-anchor="middle" font-size="13" fill="#a5b4fc" font-family="'SF Mono', 'Fira Code', Consolas, monospace">here::here("data_raw", "raw_deaths.csv")</text>
+  <text x="410" y="92" text-anchor="middle" font-size="11" fill="#94a3b8" font-style="italic">Same code on every machine</text>
+
+  <!-- Arrow down from code -->
+  <line x1="410" y1="105" x2="410" y2="140" stroke="#6366f1" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- here::here() finds the project root -->
+  <rect x="240" y="145" width="340" height="40" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="410" y="163" text-anchor="middle" font-size="13" fill="#4338ca" font-weight="500">Finds project root via .Rproj / .here / .git</text>
+  <text x="410" y="178" text-anchor="middle" font-size="10" fill="#6366f1">Walks up directory tree until it finds an anchor file</text>
+
+  <!-- Fork to two machines -->
+  <line x1="300" y1="185" x2="180" y2="230" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="520" y1="185" x2="640" y2="230" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Alice's machine (Mac) -->
+  <rect x="30" y="235" width="340" height="190" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="235" width="340" height="35" rx="10" fill="#f1f5f9"/>
+  <rect x="30" y="258" width="340" height="12" fill="#f1f5f9"/>
+  <!-- Fake window buttons -->
+  <circle cx="52" cy="252" r="5" fill="#ef4444"/>
+  <circle cx="68" cy="252" r="5" fill="#f59e0b"/>
+  <circle cx="84" cy="252" r="5" fill="#22c55e"/>
+  <text x="200" y="257" text-anchor="middle" font-size="12" font-weight="500" fill="#475569">Alice's Mac</text>
+
+  <!-- Alice's path tree -->
+  <text x="55" y="295" font-size="12" fill="#64748b" font-family="'SF Mono', 'Fira Code', Consolas, monospace">/Users/alice/Dropbox/</text>
+  <text x="70" y="315" font-size="12" fill="#64748b" font-family="'SF Mono', 'Fira Code', Consolas, monospace">mortality_project/</text>
+  <text x="85" y="335" font-size="12" fill="#6366f1" font-weight="600" font-family="'SF Mono', 'Fira Code', Consolas, monospace">mortality.Rproj</text>
+  <text x="268" y="335" font-size="9" fill="#6366f1">← root</text>
+  <text x="85" y="355" font-size="12" fill="#64748b" font-family="'SF Mono', 'Fira Code', Consolas, monospace">data_raw/</text>
+  <text x="100" y="375" font-size="12" fill="#16a34a" font-weight="500" font-family="'SF Mono', 'Fira Code', Consolas, monospace">raw_deaths.csv</text>
+
+  <!-- Result for Alice -->
+  <rect x="30" y="400" width="340" height="28" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="200" y="419" text-anchor="middle" font-size="10" fill="#15803d" font-family="'SF Mono', 'Fira Code', Consolas, monospace">/Users/alice/Dropbox/mortality_project/data_raw/raw_deaths.csv</text>
+
+  <!-- Bob's machine (Windows) -->
+  <rect x="450" y="235" width="340" height="190" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="450" y="235" width="340" height="35" rx="10" fill="#f1f5f9"/>
+  <rect x="450" y="258" width="340" height="12" fill="#f1f5f9"/>
+  <!-- Fake window buttons -->
+  <circle cx="472" cy="252" r="5" fill="#ef4444"/>
+  <circle cx="488" cy="252" r="5" fill="#f59e0b"/>
+  <circle cx="504" cy="252" r="5" fill="#22c55e"/>
+  <text x="620" y="257" text-anchor="middle" font-size="12" font-weight="500" fill="#475569">Bob's Windows PC</text>
+
+  <!-- Bob's path tree -->
+  <text x="475" y="295" font-size="12" fill="#64748b" font-family="'SF Mono', 'Fira Code', Consolas, monospace">C:/Users/bob/Documents/</text>
+  <text x="490" y="315" font-size="12" fill="#64748b" font-family="'SF Mono', 'Fira Code', Consolas, monospace">mortality_project/</text>
+  <text x="505" y="335" font-size="12" fill="#6366f1" font-weight="600" font-family="'SF Mono', 'Fira Code', Consolas, monospace">mortality.Rproj</text>
+  <text x="688" y="335" font-size="9" fill="#6366f1">← root</text>
+  <text x="505" y="355" font-size="12" fill="#64748b" font-family="'SF Mono', 'Fira Code', Consolas, monospace">data_raw/</text>
+  <text x="520" y="375" font-size="12" fill="#16a34a" font-weight="500" font-family="'SF Mono', 'Fira Code', Consolas, monospace">raw_deaths.csv</text>
+
+  <!-- Result for Bob -->
+  <rect x="450" y="400" width="340" height="28" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="620" y="419" text-anchor="middle" font-size="10" fill="#15803d" font-family="'SF Mono', 'Fira Code', Consolas, monospace">C:/Users/bob/Documents/mortality_project/data_raw/raw_deaths.csv</text>
+
+  <!-- Bottom annotation -->
+  <text x="410" y="452" text-anchor="middle" font-size="12" fill="#16a34a" font-weight="500">Same code, different absolute paths — both work</text>
+</svg>

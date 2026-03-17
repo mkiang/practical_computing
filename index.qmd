@@ -1,0 +1,92 @@
+---
+title: "{{< var course.title >}}"
+subtitle: "{{< var course.number >}} | {{< var course.quarter >}} | {{< var course.institution >}}"
+date: ""
+format:
+  html:
+    number-sections: false
+    toc: false
+---
+
+## Instructor
+
+**{{< var instructor.name >}}** | {{< var course.department >}} | {{< var instructor.email >}}
+
+## **WARNING**: This is not a real course
+
+This is a fictional course. I spent about 18 months interviewing PhD students, gathering notes, and cataloging gaps in what other Stanford courses cover. I wanted to make a class that would equip students with the basic computational skills I would desire for a potential research assistant in my lab. The goal is a class that provides students with the meta-skills of computational work specific to population health research. 
+
+I ended up being asked to teach a different course, so this is just a place for me to organize my thoughts and share them. I still think the material will be useful to new members of my lab.
+
+It is also an exercise in getting used to incorporating AI in my workflow. I'm using AI to sort through my notes, flesh out my outlines, find areas of my lecture notes that lack clarity, draft mermaid diagrams for me, make sure the URLs are still working, convert my rmd files into qmd, etc. That said, I review everything so all mistakes are my own. 
+
+**I have never actually taught any of this.** I don't know if the lectures are too long, the problem sets too easy, the slides too fast, or the notes in the wrong order. I'll keep updating as I assemble materials, but consider yourself warned.
+
+Use at your own risk.
+
+## Course Description
+
+This course teaches the practical computing skills that epidemiologists and population health researchers need for transparent, reproducible, and efficient work. It is not a statistics course or a methods course — it covers the workflows, tooling, and project infrastructure that make good science possible. Students learn to organize projects, write clean code, work with data at scale, communicate results, and collaborate using modern version control. R is the primary language but the principles generalize.
+
+**Prerequisites:** Comfortable with R, at least introductory statistics, basic epidemiology
+
+## Schedule
+
+(Materials will be updated as I make them.)
+
+| Week | Session | Type | Topic |
+|-----:|--------:|------|-------|
+| 1 | 01 | Lecture | [The Scientific Computing Workflow](#session-01) |
+| 1 | 02 | Lecture | Your Computer and the Shell |
+| 2 | 03 | Lecture | Reproducible Research and Version Control with Git |
+| 2 | 04 | Lab | Git/GitHub Setup Lab |
+| 3 | 05 | Lecture | R Data Types, Structures, and Control Flow |
+| 3 | 06 | Lab | R Foundations Lab |
+| 4 | 07 | Lecture | Tidy Data and the Split-Apply-Combine Strategy |
+| 4 | 08 | Lab | Tidy Data Lab |
+| 5 | 09 | Lecture | Writing Functions and Abstraction |
+| 5 | 10 | Lab | Functions Lab |
+| 6 | 11 | Lecture | Data Visualization and Scientific Communication |
+| 6 | 12 | Lab | Visualization Lab |
+| 7 | 13 | Lecture | Working with Data Larger Than Memory |
+| 7 | 14 | Lab | Big Data Lab |
+| 8 | 15 | Lecture | Debugging, Profiling, and Speeding Up Your Code |
+| 8 | 16 | Lab | Debugging Lab |
+| 9 | 17 | Lecture | Working with Messy and Non-Tabular Data |
+| 9 | 18 | Lab | Messy Data Lab |
+| 10 | 19 | Lecture | Pipelines, HPC, and Putting It All Together |
+| 10 | 20 | Lab | Pipelines Lab |
+
+## Weekly Materials
+
+### Week 1, Session 01: The Scientific Computing Workflow {#session-01}
+
+[Notes](01-introduction/01-introduction_notes.html) · [Slides](01-introduction/01-introduction_slides.html) · Problem Set (coming soon)
+
+*Read before class:*
+
+- Wilson et al. (2017). [Good Enough Practices in Scientific Computing](https://doi.org/10.1371/journal.pcbi.1005510) (§1–2)
+- Bryan & Hester. [What They Forgot to Teach You About R, Ch. 3: Project-oriented workflow](https://rstats.wtf/projects)
+- Wickham, Çetinkaya-Rundel, & Grolemund (2023). [R for Data Science (2e), Ch. 6: Workflow: scripts and projects](https://r4ds.hadley.nz/workflow-scripts)
+
+*Additional reading:*
+
+- Bryan (2017). [Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) — Short, opinionated argument against `setwd()`
+- Wickham, Çetinkaya-Rundel, & Grolemund (2023). [R for Data Science (2e), Ch. 8: Workflow: getting help](https://r4ds.hadley.nz/workflow-help) — The `reprex` package and how to ask for help
+- Healy (2019). [The Plain Person's Guide to Plain Text Social Science](https://kieranhealy.org/publications/plain-person-text/) — The case for plain text workflows in research
+- Noble (2009). [A Quick Guide to Organizing Computational Biology Projects](https://doi.org/10.1371/journal.pcbi.1000424) — The canonical directory structure paper
+- Wilson et al. (2014). [Best Practices for Scientific Computing](https://doi.org/10.1371/journal.pbio.1001745) — The predecessor to "Good Enough Practices," aimed at computationally intensive researchers
+- Sandve et al. (2013). [Ten Simple Rules for Reproducible Computational Research](https://doi.org/10.1371/journal.pcbi.1003285) — Checklist-style reproducibility guide
+
+### Week 1, Session 02: Your Computer and the Shell {#session-02}
+
+Coming soon.
+
+## Resources
+
+- [R for Data Science (2e)](https://r4ds.hadley.nz/) — Wickham, Çetinkaya-Rundel, & Grolemund
+- [Advanced R (2e)](https://adv-r.hadley.nz/) — Wickham
+- [Happy Git and GitHub for the useR](https://happygitwithr.com/) — Bryan, the STAT 545 TAs, & Hester
+- [What They Forgot to Teach You About R](https://rstats.wtf/) — Bryan & Hester
+- [Modern Plain Text Computing](https://mptc.io/) — Healy (course site, Duke SOCIOL 703)
+- [Quarto Documentation](https://quarto.org/docs/guide/)

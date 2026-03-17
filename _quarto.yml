@@ -1,0 +1,38 @@
+project:
+  type: default
+  output-dir: docs
+  render:
+    - index.qmd
+    - "01-*/**/*.qmd"  
+    # - "02-*/**/*.qmd"  
+    # - "03-*/**/*.qmd"  
+    # - "04-*/**/*.qmd"  
+    # - "05-*/**/*.qmd"  
+    # - "06-*/**/*.qmd"  
+    # - "07-*/**/*.qmd"  
+    # - "08-*/**/*.qmd"  
+    # - "09-*/**/*.qmd"  
+    # - "10-*/**/*.qmd"  
+    # - "11-*/**/*.qmd"  
+    # - "12-*/**/*.qmd"  
+    # - "13-*/**/*.qmd"  
+    # - "14-*/**/*.qmd"  
+    # - "15-*/**/*.qmd"  
+    # - "16-*/**/*.qmd"  
+    # - "17-*/**/*.qmd"  
+    # - "18-*/**/*.qmd"  
+    # - "19-*/**/*.qmd"  
+    # - "20-*/**/*.qmd"  
+
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    theme: cosmo
+    link-external-newwindow: true
+    embed-resources: true
+
+execute:
+  eval: false
+  echo: true
