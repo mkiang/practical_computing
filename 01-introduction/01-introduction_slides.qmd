@@ -102,9 +102,7 @@ These decisions are the intellectual core of the analysis. In many projects, the
 
 . . .
 
-::: {.callout-important}
 **A research project includes the code, the data, the computational environment, and the documentation** — the manuscript is one output among several.
-:::
 
 ::: aside
 Marwick, Boettiger & Mullen (2018). [Packaging Data Analytical Work Reproducibly Using R (and Friends)](https://doi.org/10.1080/00031305.2017.1375986). *Am Stat*, 72(1): 80–88.
@@ -144,10 +142,10 @@ Sandve et al. (2013). [Ten Simple Rules for Reproducible Computational Research]
 
 ## The research computing lifecycle
 
-![Each stage of research produces artifacts (code, data, documentation) that together constitute the research compendium. The manuscript is just one output among many.](assets/research_lifecycle.svg){fig-align="center"}
+![The research computing lifecycle.](assets/research_lifecycle.svg){fig-align="center" height="475"}
 
 ::: {.notes}
-~2 min. Walk through the diagram. Every stage generates decisions and outputs that need recording. The manuscript alone does not capture the full intellectual content.
+~2 min. Walk through the diagram. Each stage produces artifacts (code, data, documentation) that together constitute the research compendium. The manuscript is just one output — every stage generates decisions and outputs that need recording.
 :::
 
 ## What a well-organized project looks like {.smaller}
@@ -254,12 +252,16 @@ rm(list = ls())
 - Close database connections
 - Reset the working directory
 
-. . .
+::: {.notes}
+~3 min. Students often learn this pattern from tutorials. It gives a false sense of security. If the script depends on a package loaded interactively but not called with `library()`, `rm(list = ls())` won't catch it.
+:::
 
-**The only reliable clean slate** — restart R
+## The only reliable clean slate — restart R {.smaller}
 
 - **Windows/Linux:** `Ctrl+Shift+F10`
 - **macOS:** `Cmd+Shift+F10`
+
+. . .
 
 ::: {.callout-tip}
 ## RStudio setting
@@ -268,7 +270,7 @@ Go to *Tools → Global Options → General*: uncheck "Restore .RData into works
 :::
 
 ::: {.notes}
-~3 min + ~2 min for students to change settings. Students often learn this pattern from tutorials. It gives a false sense of security. If the script depends on a package loaded interactively but not called with `library()`, `rm(list = ls())` won't catch it. Have students change their RStudio settings right now.
+~2 min. Have students change their RStudio settings right now. This ensures every session starts fresh — no hidden state carried over.
 :::
 
 ## RStudio Projects and `.Rproj` files

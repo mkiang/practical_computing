@@ -90,3 +90,7 @@ Coming soon.
 - [What They Forgot to Teach You About R](https://rstats.wtf/) — Bryan & Hester
 - [Modern Plain Text Computing](https://mptc.io/) — Healy (course site, Duke SOCIOL 703)
 - [Quarto Documentation](https://quarto.org/docs/guide/)
+
+## Built with
+
+All materials are authored in [Quarto](https://quarto.org/) using [RStudio](https://posit.co/products/open-source/rstudio/). Lecture slides use the [quarto-revealjs-clean](https://github.com/grantmcdermott/quarto-revealjs-clean) extension by Grant McDermott.

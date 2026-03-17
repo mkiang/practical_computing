@@ -47,7 +47,7 @@ This is also an exercise in incorporating AI into my workflow. I'm using AI to s
 
 ## Building the site
 
-The site is built with [Quarto](https://quarto.org/) and deployed via GitHub Pages.
+All materials are authored in [Quarto](https://quarto.org/) using [RStudio](https://posit.co/products/open-source/rstudio/). Lecture slides use the [quarto-revealjs-clean](https://github.com/grantmcdermott/quarto-revealjs-clean) extension by Grant McDermott. The site is deployed via GitHub Pages.
 
 ```bash
 quarto render

@@ -37,3 +37,4 @@ eph_course_notes_summary.md
 
 /.quarto/
 **/*.quarto_ipynb
+.positai
